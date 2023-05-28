@@ -10,7 +10,7 @@ export const PlaylistEmbed = () => {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setIsLoading(false);
-        }, 1000); // Adjust the timeout value as needed
+        }, 2500); // Adjust the timeout value as needed
 
         return () => clearTimeout(timeout);
     }, []);

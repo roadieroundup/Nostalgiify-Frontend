@@ -18,7 +18,7 @@ export const CreatePlaylistForm = () => {
             const year = selectedDate.split('-')[0];
             const month = selectedDate.split('-')[1];
             const day = selectedDate.split('-')[2];
-            console.log(year, month, day);
+            // console.log(year, month, day);
             startCreatePlaylist({ year, month, day });
             form.resetFields();
         } catch (error) {

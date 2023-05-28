@@ -24,7 +24,7 @@ export const useAuthStore = () => {
         try {
             await NostalgiifyApi.get('/nostalgiify/start');
         } catch (error) {
-            console.log(error);
+            console.log('Backend error');
         }
     };
 
@@ -100,7 +100,7 @@ export const useAuthStore = () => {
                     day,
                 }
             );
-            console.log(data);
+            // console.log(data);
             dispatch(onSetActivePlaylistId(data.id));
         } catch (error) {
             console.log(error.response.data);

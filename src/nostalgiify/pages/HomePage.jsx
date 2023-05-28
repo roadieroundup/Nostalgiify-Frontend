@@ -1,7 +1,7 @@
 import { GithubOutlined } from '@ant-design/icons';
 import { Button, Col, Layout, Row, Typography } from 'antd';
 import { useAuthStore } from '../../hooks';
-import { CreatePlaylistForm, PlaylistEmbed } from '../components';
+import { CreatePlaylistForm, JZIcon, PlaylistEmbed } from '../components';
 const { Title } = Typography;
 const { Footer, Content } = Layout;
 
@@ -68,19 +68,28 @@ export const HomePage = () => {
                 )}
             </Content>
             <Footer className="glassexp">
-                <Title level={5}>
-                    Made with
-                    <span>
-                        <img
-                            className="pulse"
-                            src="public/JZLogo.svg"
-                            style={{
-                                width: '2rem',
-                            }}
-                        ></img>
-                    </span>
-                    in 🇨🇷
-                </Title>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Title level={5}>
+                        Made with
+                    </Title>
+                    <JZIcon
+                        className="pulse"
+                        style={{
+                            marginTop: '-0.5rem',
+                            color: '#ff0000',
+                        }}
+                    />
+                    <Title level={5}>
+                        in 🇨🇷
+                    </Title>
+                </div>
                 <GithubOutlined
                     className="pulse"
                     style={{
